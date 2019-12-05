@@ -20,7 +20,7 @@ class SqsFifoConnector extends SqsConnector
     {
         $config = $this->getDefaultConfiguration($config);
 
-        if (!\Arr::endsWith($config['queue'], '.fifo')) {
+        if (!\Str::endsWith($config['queue'], '.fifo')) {
             throw new InvalidArgumentException('FIFO queue name must end in ".fifo"');
         }
 
