@@ -248,6 +248,6 @@ class SqsFifoQueue extends SqsQueue
     {
         $payload = json_decode($payload, true);
 
-        return array_get($payload, $key, $default);
+        return \Arr::get($payload, $key, $default);
     }
 }
